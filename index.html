@@ -103,13 +103,13 @@ $("#Srch").click(function(){
 			}
 		
 			pos = data;
-			alert(pos);
+			
 			posarr = pos.split("/");
 			Blat = posarr[0];
 			Blng = posarr[1];
 			NumPass = posarr[2];
 			stats= posarr[3];
-			alert(NumPass+" "+stats);
+		
 			$.post("http://www.myexps93.esy.es/GBusRoutesServe.php",{val:busno},function(data,status){
 			if((status == "success")&&(data!="{}"))
 			{
